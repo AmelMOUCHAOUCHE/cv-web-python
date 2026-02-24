@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% set page_title = "Projets" %}
+{% block content %}
+<section class="card">
+  <h2>Projets</h2>
+  <div class="grid">
+    {% for p in projets %}
+    <article class="tile neon">
+      <div class="tile-top">
+        <h3>{{ p.name }}</h3>
+        <p class="muted">{{ p.subtitle }}</p>
+      </div>
+
+      <ul>
+        {% for b in p.bullets %}
+        <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+
+      <div class="tags">
+        {% for s in p.skills %}
+        <span class="tag tag-skill">{{ s }}</span>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page_title }} — {{ name }}</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="glow-dot"></div>
+      <div>
+        <h1>{{ name }}</h1>
+        <p class="subtitle">{{ title }}</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="btn" href="./index.html">Accueil</a>
+      <a class="btn" href="./experiences.html">Expériences</a>
+      <a class="btn" href="./projets.html">Projets</a>
+      <a class="btn" href="./competences.html">Compétences</a>
+      <a class="btn" href="./langues.html">Langues</a>
+      <a class="btn" href="./certifications.html">Certifs</a>
+      <a class="btn" href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <span>© {{ name }}</span>
+  </footer>
+</body>
+</html>

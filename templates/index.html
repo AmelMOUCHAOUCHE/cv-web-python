@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% set page_title = "Accueil" %}
+{% block content %}
+<section class="card hero">
+  <img class="avatar" src="./assets/{{ photo }}" alt="Photo de {{ name }}" />
+  <div>
+    <h2 class="big">{{ name }}</h2>
+    <p class="lead">{{ title }}</p>
+
+    <div class="pill">🎯 {{ recherche }}</div>
+    <div class="pill">📅 {{ rythme_alternance }}</div>
+
+    <p class="muted">{{ resume }}</p>
+
+    <div class="links">
+      <a href="https://www.linkedin.com/in/{{ linkedin_user }}" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://github.com/{{ github_user }}" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="mailto:{{ email }}">Email</a>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h3>Compétences (aperçu)</h3>
+  <p class="muted">Graph généré en Python (Matplotlib).</p>
+  <img class="chart" src="./assets/skills.png" alt="Compétences" />
+</section>
+{% endblock %}
+templates/experiences.html (rectangles + hover interactif)
+
+{% extends "base.html" %}
+{% set page_title = "Expériences" %}
+{% block content %}
+<section class="card">
+  <h2>Expériences</h2>
+  <div class="grid">
+    {% for e in experiences %}
+    <article class="tile">
+      <div class="tile-top">
+        <h3>{{ e.role }}</h3>
+        <p class="muted">{{ e.company }} • {{ e.date }}</p>
+      </div>
+      <ul>
+        {% for b in e.bullets %}
+        <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+      <div class="tags">
+        {% for t in e.tags %}
+        <span class="tag">{{ t }}</span>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

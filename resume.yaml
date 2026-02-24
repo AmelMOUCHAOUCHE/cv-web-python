@@ -1,0 +1,45 @@
+name: "Amel Mouchaouche"
+title: "Data Engineer (Junior) / BI & Big Data"
+alternance: "Alternance – 3 jours entreprise / 2 jours école"
+location: "France"
+
+resume: "Étudiante en cycle ingénieur, orientée Data Engineering (Python/SQL). Je construis des pipelines, j’analyse et je transforme les données en décision."
+
+email: "tonmail@example.com"
+linkedin: "https://www.linkedin.com/in/amelmouchaouche"
+github: "https://github.com/AmelMOUCHAOUCHE"
+photo: "photo.png"
+
+atouts:
+  - "BI & Big Data : modélisation, analyse, pipelines"
+  - "Python, SQL, data viz, intégration"
+  - "Curieuse, rigoureuse, orientée production"
+
+competences:
+  - name: "Python"
+    level: 85
+  - name: "SQL"
+    level: 80
+  - name: "ETL / Pipelines"
+    level: 75
+  - name: "BI / Dashboards"
+    level: 78
+  - name: "Cloud / Deploy"
+    level: 60
+
+experiences:
+  - role: "Stage – Développement Salesforce / CRM"
+    company: "ASSA Associates (INWI)"
+    date: "2024"
+    bullets:
+      - "Développement d’un module de gestion d’utilisateurs D2D"
+      - "APEX, LWC, React, API, tests, mise en production"
+  - role: "Projets BI & Data"
+    company: "3iL Ingénieurs / Université"
+    date: "2022–2025"
+    bullets:
+      - "Analyse de données, data mining, modélisation"
+      - "SQL/Oracle, Python, dashboards"
+
+contact_note: "Disponible pour un stage / alternance en BI & Data Engineering."
+

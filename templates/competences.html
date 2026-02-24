@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% set page_title = "Compétences" %}
+{% block content %}
+<section class="card">
+  <h2>Compétences</h2>
+
+  {% for c in competences %}
+  <h3 class="section-title">{{ c.category }}</h3>
+  <div class="grid">
+    {% for it in c.items %}
+    <article class="tile compact">
+      <div class="tile-top">
+        <h3>{{ it.name }}</h3>
+        <p class="muted">{{ it.level }}%</p>
+      </div>
+      <div class="bar">
+        
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

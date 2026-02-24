@@ -1,0 +1,92 @@
+:root{
+  --bg:#070A12;
+  --card:#0D1224;
+  --text:#E7ECFF;
+  --muted:#9AA6D6;
+  --neon:#7C5CFF;
+  --neon2:#00E5FF;
+  --border:rgba(124,92,255,.25);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(1000px 500px at 15% 10%, rgba(124,92,255,.18), transparent 55%),
+              radial-gradient(900px 450px at 85% 20%, rgba(0,229,255,.14), transparent 55%),
+              var(--bg);
+  color:var(--text);
+}
+
+.top{
+  position:sticky; top:0;
+  backdrop-filter: blur(10px);
+  background: rgba(7,10,18,.6);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:16px 18px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{display:flex; gap:12px; align-items:center}
+.glow-dot{
+  width:14px; height:14px; border-radius:999px;
+  background: linear-gradient(135deg,var(--neon),var(--neon2));
+  box-shadow: 0 0 18px rgba(124,92,255,.6), 0 0 22px rgba(0,229,255,.4);
+}
+
+h1{font-size:18px; margin:0}
+.subtitle{margin:2px 0 0; color:var(--muted); font-size:13px}
+
+.nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+.btn{
+  display:inline-block;
+  padding:8px 10px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  color:var(--text);
+  text-decoration:none;
+  background: rgba(13,18,36,.6);
+}
+.btn:hover{border-color: rgba(0,229,255,.35)}
+
+main{max-width:980px; margin:0 auto; padding:18px}
+.card{
+  background: linear-gradient(180deg, rgba(13,18,36,.92), rgba(13,18,36,.70));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:18px;
+  padding:18px;
+  margin:14px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.hero{display:flex; gap:16px; align-items:center}
+.avatar{
+  width:112px; height:112px; border-radius:18px;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.lead{font-size:15px; color:var(--text)}
+.links a{margin-right:12px; color:var(--neon2); text-decoration:none}
+.links a:hover{text-decoration:underline}
+
+.muted{color:var(--muted)}
+.chart{max-width:520px; width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.06)}
+.xp{padding:10px 0; border-top:1px dashed rgba(255,255,255,.08)}
+.xp:first-of-type{border-top:none}
+.xp-head{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
+
+.footer{opacity:.8; text-align:center; padding:20px; color:var(--muted)}
+
+.hero-min .big{font-size:26px; margin:0 0 6px}
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(13,18,36,.55);
+  margin:10px 0;
+}

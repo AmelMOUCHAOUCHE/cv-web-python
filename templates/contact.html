@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set page_title = "Contact" %}
+{% block content %}
+<section class="card">
+  <h2>Contact</h2>
+
+  <div class="grid">
+    <a class="tile linktile" href="https://www.linkedin.com/in/{{ linkedin_user }}" target="_blank" rel="noreferrer">
+      <div class="tile-top">
+        <h3>LinkedIn</h3>
+        <p class="muted">/in/{{ linkedin_user }}</p>
+      </div>
+    </a>
+
+    <a class="tile linktile" href="https://github.com/{{ github_user }}" target="_blank" rel="noreferrer">
+      <div class="tile-top">
+        <h3>GitHub</h3>
+        <p class="muted">github.com/{{ github_user }}</p>
+      </div>
+    </a>
+
+    <a class="tile linktile" href="mailto:{{ email }}">
+      <div class="tile-top">
+        <h3>Email</h3>
+        <p class="muted">{{ email }}</p>
+      </div>
+    </a>
+
+    <a class="tile linktile" href="tel:{{ phone }}">
+      <div class="tile-top">
+        <h3>Téléphone</h3>
+        <p class="muted">{{ phone }}</p>
+      </div>
+    </a>
+  </div>
+</section>
