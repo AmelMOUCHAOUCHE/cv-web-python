@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% set page_title = "Langues & Intérêts" %}
+{% block content %}
+<section class="card">
+  <h2>Langues & Intérêts</h2>
+
+  <h3 class="section-title">Langues</h3>
+  <div class="grid">
+    {% for lang in languages %}
+    <article class="tile compact tilt" data-tilt>
+      <div class="tile-top">
+        <h3>{{ lang.name }}</h3>
+        <p class="muted">{{ lang.level }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <h3 class="section-title">Centres d’intérêt</h3>
+  <ul class="checklist">
+    {% for interest in interests %}
+    <li>{{ interest }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3 class="section-title">Certifications</h3>
+  <div class="grid">
+    {% for cert in certifications %}
+    <a class="tile linktile tilt" data-tilt href="{{ cert.url }}" target="_blank" rel="noreferrer">
+      <div class="tile-top">
+        <h3>{{ cert.title }}</h3>
+        <p class="muted">Voir la certification</p>
+      </div>
+      <div class="cta">Ouvrir →</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
