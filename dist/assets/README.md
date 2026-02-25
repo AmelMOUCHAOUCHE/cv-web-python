@@ -30,3 +30,19 @@ Générer le site : python build.py
 --> Cela crée :
     - ist/index.html
     - dist/assets/
+
+
+    # Portfolio (Python Static Site)
+
+Portfolio multipage généré en Python (YAML + Jinja2).
+
+## Installer
+pip install pyyaml jinja2
+
+## Générer
+python build.py
+
+## Lancer en local
+cd dist
+python -m http.server 8000
+Ouvrir http://localhost:8000

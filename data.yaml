@@ -1,0 +1,163 @@
+name: "Amel MOUCHAOUCHE"
+title: "Data Engineer – Alternance 12 mois"
+photo: "photo.jpg"
+
+about: >
+  Actuellement en alternance chez SUEZ en tant qu’Ingénieure Data et Performance.
+  Spécialisée BI & Big Data, j’industrialise des pipelines data et j’automatise des KPI
+  pour le pilotage de la performance.
+
+searching: >
+  Je recherche une alternance (12 mois) en Data Engineering / Data & Performance, avec une forte composante
+  industrialisation (Airflow/Python/SQL), qualité, monitoring, et architecture data.
+
+alternance_rhythm: "Rythme : 2 semaines entreprise / 1 semaine école"
+location: "France"
+dob: "03-12-2001"
+
+links:
+  github: "https://github.com/amelmouchaouche"
+  linkedin: "https://www.linkedin.com/in/amelmouchaouche"
+  email: "amel.mouchaouche09@gmail.com"
+  phone: "+33 7 62 57 94 52"
+  handle: "@AmelMOUCHAOUCHE"
+
+# Réalisations : ton CV ne liste pas 4 projets "portfolio" détaillés,
+# donc je mets 4 cartes cohérentes avec tes expériences/compétences.
+# Tu peux remplacer image + description + github dès que tu veux.
+realisations:
+  - title: "Industrialisation Pipelines Data (Airflow)"
+    image: "projects/p1.jpg"
+    tools: ["Airflow", "Python", "SQL", "Monitoring", "Data Quality"]
+    github: "https://github.com/amelmouchaouche"
+    description: "Industrialisation de pipelines avec logs, monitoring et contrôle qualité des données."
+
+  - title: "KPI & Dashboards automatisés"
+    image: "projects/p2.jpg"
+    tools: ["Power BI", "Azure Log Analytics", "SQL", "Automatisation"]
+    github: "https://github.com/amelmouchaouche"
+    description: "Conception de tableaux de bord KPI automatisés pour piloter la performance."
+
+  - title: "Optimisation SQL & Backend APIs"
+    image: "projects/p3.jpg"
+    tools: ["SQL", "Node.js", "REST", "CI/CD", "React"]
+    github: "https://github.com/amelmouchaouche"
+    description: "Optimisation de requêtes, intégration d’APIs REST et refonte UI."
+
+  - title: "CRM Salesforce – Gouvernance & Automatisation"
+    image: "projects/p4.jpg"
+    tools: ["Salesforce", "Apex", "LWC", "React", "Tests", "Déploiement"]
+    github: "https://github.com/amelmouchaouche"
+    description: "Modules CRM, automatisation de workflows, règles de gestion et gouvernance des accès."
+
+experience_timeline:
+  - date: "09-2025 → (en cours)"
+    title: "Ingénieure Data et Performance – Alternance"
+    place: "SUEZ — Strasbourg"
+    points:
+      - "Industrialisation des pipelines data (Airflow, Python, SQL) : logs, monitoring, contrôle qualité"
+      - "Extraction, nettoyage, transformation des données pour le pilotage de la performance"
+      - "Tableaux de bord KPI automatisés (Power BI, Azure Log Analytics)"
+      - "Participation à l’architecture data cible (GCP / Snowflake)"
+      - "Coordination DSI, mise en production et documentation technique"
+
+  - date: "04-2025 → 09-2025"
+    title: "Développeuse FullStack – Stage"
+    place: "Musicali — Paris"
+    points:
+      - "Optimisation de requêtes SQL & analyse de performance applicative"
+      - "Backend Node.js + intégration d’APIs REST"
+      - "Refonte UI avec React"
+      - "Support pipelines CI/CD & évolutions applicatives"
+
+  - date: "01-2024 → 06-2024"
+    title: "Développeuse & Administratrice Salesforce – Stage"
+    place: "ASSA Associates (INWI) — Paris"
+    points:
+      - "Développement modules CRM Salesforce (Apex, React, LWC)"
+      - "Automatisation processus métiers & optimisation workflows"
+      - "Cadrage fonctionnel & formalisation règles de gestion"
+      - "Gouvernance des accès & évolution architecture applicative"
+      - "Tests, déploiement, documentation, coordination IT/métiers"
+
+formation_timeline:
+  - date: "09-2025 → 08-2027"
+    title: "Diplôme d’ingénieur Informatique"
+    place: "Efrei – Université Paris-Panthéon-Assas (Bordeaux)"
+    points:
+      - "Parcours ingénieur orienté données / SI"
+
+  - date: "2024"
+    title: "Diplôme d’ingénieur Informatique – BI & Big Data"
+    place: "3iL Ingénieurs — Limoges"
+    points:
+      - "Spécialisation BI & Big Data"
+
+competences:
+  - category: "Langages"
+    items:
+      - { name: "Python", level: 90 }
+      - { name: "SQL", level: 88 }
+      - { name: "R", level: 70 }
+      - { name: "MATLAB", level: 60 }
+      - { name: "C / C++", level: 55 }
+      - { name: "HTML / CSS", level: 70 }
+      - { name: "Bash (Linux)", level: 65 }
+
+  - category: "Bibliothèques / ML"
+    items:
+      - { name: "Pandas / NumPy", level: 85 }
+      - { name: "Matplotlib", level: 75 }
+      - { name: "Scikit-Learn", level: 78 }
+      - { name: "TensorFlow / Keras", level: 65 }
+      - { name: "PyTorch", level: 60 }
+      - { name: "Hugging Face", level: 60 }
+      - { name: "SpaCy / NLTK", level: 55 }
+      - { name: "OpenAI", level: 55 }
+      - { name: "Gurobi", level: 50 }
+
+  - category: "Cloud & Data Platforms"
+    items:
+      - { name: "AWS (S3, EC2, Glue, SageMaker, Athena, Lambda, Redshift)", level: 65 }
+      - { name: "Azure (ML Studio)", level: 55 }
+      - { name: "GCP (BigQuery)", level: 55 }
+      - { name: "Databricks / PySpark (MLlib)", level: 60 }
+
+  - category: "Outils & Méthodes"
+    items:
+      - { name: "Power BI", level: 80 }
+      - { name: "Tableau", level: 60 }
+      - { name: "Git", level: 75 }
+      - { name: "Docker", level: 65 }
+      - { name: "JIRA", level: 65 }
+      - { name: "SCRUM / Agile", level: 70 }
+      - { name: "Alteryx", level: 55 }
+      - { name: "Google Analytics", level: 60 }
+      - { name: "SAS", level: 50 }
+      - { name: "Microsoft Office", level: 80 }
+
+languages:
+  - { name: "Français", level: "Bilingue (C2)" }
+  - { name: "Anglais", level: "Intermédiaire (B2)" }
+  - { name: "Arabe", level: "Bilingue" }
+  - { name: "Kabyle", level: "Langue maternelle" }
+
+interests:
+  - "Bénévolat AesselCrous"
+  - "Initiation au trading & gestion du risque"
+  - "Marchés financiers & bourse"
+  - "Jeux d’échecs en ligne"
+
+certifications:
+  - title: "PCAP (en préparation)"
+    url: "https://www.pythoninstitute.org/pcap"
+  - title: "Microsoft Power BI Data Analyst — PL-300"
+    url: "https://learn.microsoft.com/credentials/certifications/power-bi-data-analyst-associate/"
+  - title: "DP-700"
+    url: "https://learn.microsoft.com/credentials/"
+  - title: "Google Analytics — Certifiée"
+    url: "https://skillshop.exceedlms.com/student/catalog"
+  - title: "AWS Educate — Machine Learning & Generative AI"
+    url: "https://aws.amazon.com/education/awseducate/"
+  - title: "Dataiku — Core Designer / ML Practitioner"
+    url: "https://www.dataiku.com/learn/certifications/"

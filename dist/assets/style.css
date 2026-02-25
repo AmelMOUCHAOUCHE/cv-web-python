@@ -80,3 +80,13 @@ main{max-width:980px; margin:0 auto; padding:18px}
 .xp-head{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
 
 .footer{opacity:.8; text-align:center; padding:20px; color:var(--muted)}
+
+.hero-min .big{font-size:26px; margin:0 0 6px}
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(13,18,36,.55);
+  margin:10px 0;
+}

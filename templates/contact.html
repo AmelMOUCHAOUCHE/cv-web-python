@@ -3,34 +3,48 @@
 {% block content %}
 <section class="card">
   <h2>Contact</h2>
+  <p class="muted">Clique pour ouvrir — ou copie en 1 clic.</p>
 
   <div class="grid">
-    <a class="tile linktile" href="https://www.linkedin.com/in/{{ linkedin_user }}" target="_blank" rel="noreferrer">
+    <a class="tile linktile tilt" data-tilt href="{{ links.linkedin }}" target="_blank" rel="noreferrer">
       <div class="tile-top">
         <h3>LinkedIn</h3>
-        <p class="muted">/in/{{ linkedin_user }}</p>
+        <p class="muted">{{ links.linkedin }}</p>
       </div>
+      <div class="cta">Ouvrir →</div>
     </a>
 
-    <a class="tile linktile" href="https://github.com/{{ github_user }}" target="_blank" rel="noreferrer">
+    <a class="tile linktile tilt" data-tilt href="{{ links.github }}" target="_blank" rel="noreferrer">
       <div class="tile-top">
         <h3>GitHub</h3>
-        <p class="muted">github.com/{{ github_user }}</p>
+        <p class="muted">{{ links.github }}</p>
       </div>
+      <div class="cta">Ouvrir →</div>
     </a>
 
-    <a class="tile linktile" href="mailto:{{ email }}">
+    <div class="tile tilt" data-tilt>
       <div class="tile-top">
         <h3>Email</h3>
-        <p class="muted">{{ email }}</p>
+        <p class="muted"><a class="inline-link" href="mailto:{{ links.email }}">{{ links.email }}</a></p>
       </div>
-    </a>
+      <div class="row">
+        <button class="chip" data-copy="{{ links.email }}">Copier</button>
+        <a class="chip chip-ghost" href="mailto:{{ links.email }}">Écrire</a>
+      </div>
+    </div>
 
-    <a class="tile linktile" href="tel:{{ phone }}">
+    <div class="tile tilt" data-tilt>
       <div class="tile-top">
         <h3>Téléphone</h3>
-        <p class="muted">{{ phone }}</p>
+        <p class="muted"><a class="inline-link" href="tel:{{ links.phone }}">{{ links.phone }}</a></p>
       </div>
-    </a>
+      <div class="row">
+        <button class="chip" data-copy="{{ links.phone }}">Copier</button>
+        <a class="chip chip-ghost" href="tel:{{ links.phone }}">Appeler</a>
+      </div>
+    </div>
   </div>
 </section>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+{% endblock %}

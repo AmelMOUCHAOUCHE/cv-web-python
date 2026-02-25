@@ -3,7 +3,6 @@ import sys
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).parent
 TEMPLATES = ROOT / "templates"
@@ -12,58 +11,29 @@ ASSETS_SRC = ROOT / "assets"
 ASSETS_DIST = DIST / "assets"
 
 
-def make_skills_chart(data: dict, out_path: Path):
-    # On prend quelques compétences (toutes catégories confondues)
-    cats = data.get("competences", [])
-    flat = []
-    for c in cats:
-        flat.extend(c.get("items", []))
-
-    if not flat:
+def copy_assets():
+    ASSETS_DIST.mkdir(parents=True, exist_ok=True)
+    if not ASSETS_SRC.exists():
+        print("⚠️ assets/ introuvable.")
         return
-
-    labels = [x.get("name", "") for x in flat][:10]
-    values = [int(x.get("level", 0)) for x in flat][:10]
-
-    plt.figure()
-    plt.bar(labels, values)
-    plt.ylim(0, 100)
-    plt.xticks(rotation=25, ha="right")
-    plt.tight_layout()
-    plt.savefig(out_path, dpi=160)
-    plt.close()
+    for p in ASSETS_SRC.rglob("*"):
+        if p.is_file():
+            rel = p.relative_to(ASSETS_SRC)
+            target = ASSETS_DIST / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(p.read_bytes())
 
 
 def main():
-    resume_path = ROOT / "resume.yaml"
-    if not resume_path.exists():
-        print(f"❌ Fichier introuvable: {resume_path}")
+    data_path = ROOT / "data.yaml"
+    if not data_path.exists():
+        print("❌ data.yaml introuvable.")
         sys.exit(1)
 
-    data = yaml.safe_load(resume_path.read_text(encoding="utf-8")) or {}
+    data = yaml.safe_load(data_path.read_text(encoding="utf-8")) or {}
 
-    # Prépare dist/
     DIST.mkdir(exist_ok=True)
-    ASSETS_DIST.mkdir(parents=True, exist_ok=True)
-
-    # Copie assets/
-    if ASSETS_SRC.exists():
-        for p in ASSETS_SRC.glob("*"):
-            if p.is_file():
-                (ASSETS_DIST / p.name).write_bytes(p.read_bytes())
-    else:
-        print("⚠️ Dossier assets/ introuvable, je continue quand même.")
-
-    # Graph
-    try:
-        make_skills_chart(data, ASSETS_DIST / "skills.png")
-    except Exception as e:
-        print("⚠️ Graph skills.png non généré:", e)
-
-    # Jinja
-    if not TEMPLATES.exists():
-        print(f"❌ Dossier templates/ introuvable: {TEMPLATES}")
-        sys.exit(1)
+    copy_assets()
 
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES)),
@@ -72,11 +42,11 @@ def main():
 
     pages = {
         "index.html": "index.html",
-        "experiences.html": "experiences.html",
-        "projets.html": "projets.html",
+        "realisations.html": "realisations.html",
+        "experience.html": "experience.html",
+        "formation.html": "formation.html",
         "competences.html": "competences.html",
-        "langues.html": "langues.html",
-        "certifications.html": "certifications.html",
+        "extra.html": "extra.html",
         "contact.html": "contact.html",
     }
 
@@ -87,9 +57,9 @@ def main():
             print(f"❌ Rendu vide: {tpl_name}")
             sys.exit(1)
         (DIST / out_name).write_text(html, encoding="utf-8")
-        print(f"✅ {out_name} généré")
+        print(f"✅ Généré: dist/{out_name}")
 
-    print("🎉 Build terminé. Ouvre dist/index.html ou lance un serveur local.")
+    print("🎉 Terminé. Lance: cd dist && python -m http.server 8000")
 
 
 if __name__ == "__main__":

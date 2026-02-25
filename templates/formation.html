@@ -1,20 +1,20 @@
 {% extends "base.html" %}
-{% set page_title = "Expérience" %}
+{% set page_title = "Formation" %}
 {% block content %}
 <section class="card">
-  <h2>Expérience</h2>
+  <h2>Formation</h2>
   <div class="timeline">
-    {% for e in experience_timeline %}
+    {% for f in formation_timeline %}
     <div class="t-item">
       <div class="t-dot"></div>
       <div class="t-content tile">
         <div class="t-head">
-          <strong>{{ e.date }}</strong>
-          <span class="muted">{{ e.place }}</span>
+          <strong>{{ f.date }}</strong>
+          <span class="muted">{{ f.place }}</span>
         </div>
-        <h3>{{ e.title }}</h3>
+        <h3>{{ f.title }}</h3>
         <ul>
-          {% for pt in e.points %}
+          {% for pt in f.points %}
           <li>{{ pt }}</li>
           {% endfor %}
         </ul>

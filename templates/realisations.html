@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set page_title = "Réalisations" %}
+{% block content %}
+<section class="card">
+  <h2>Réalisations</h2>
+  <p class="muted">4 projets — cartes interactives avec outils & lien GitHub.</p>
+
+  <div class="grid">
+    {% for p in realisations %}
+    <article class="tile neon tilt" data-tilt>
+      <div class="thumb">
+        <img src="./assets/{{ p.image }}" alt="Image {{ p.title }}" />
+      </div>
+
+      <div class="tile-top">
+        <h3>{{ p.title }}</h3>
+        <p class="muted">{{ p.description }}</p>
+      </div>
+
+      <div class="tags">
+        {% for t in p.tools %}
+        <span class="tag tag-skill">{{ t }}</span>
+        {% endfor %}
+      </div>
+
+      <a class="chip" href="{{ p.github }}" target="_blank" rel="noreferrer">GitHub →</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+{% endblock %}

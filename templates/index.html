@@ -7,51 +7,20 @@
     <h2 class="big">{{ name }}</h2>
     <p class="lead">{{ title }}</p>
 
-    <div class="pill">🎯 {{ recherche }}</div>
-    <div class="pill">📅 {{ rythme_alternance }}</div>
+    <div class="pill">{{ alternance_rhythm }}</div>
+    <div class="pill">📍 {{ location }} •  {{ links.handle }}</div>
 
-    <p class="muted">{{ resume }}</p>
+    <div class="pill">À propos</div>
+    <p class="muted">{{ about }}</p>
+
+    <div class="pill">Ce que je cherche</div>
+    <p class="muted">{{ searching }}</p>
 
     <div class="links">
-      <a href="https://www.linkedin.com/in/{{ linkedin_user }}" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a href="https://github.com/{{ github_user }}" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="mailto:{{ email }}">Email</a>
+      <a class="link" href="{{ links.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="link" href="{{ links.github }}" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="link" href="mailto:{{ links.email }}">Email</a>
     </div>
-  </div>
-</section>
-
-<section class="card">
-  <h3>Compétences (aperçu)</h3>
-  <p class="muted">Graph généré en Python (Matplotlib).</p>
-  <img class="chart" src="./assets/skills.png" alt="Compétences" />
-</section>
-{% endblock %}
-templates/experiences.html (rectangles + hover interactif)
-
-{% extends "base.html" %}
-{% set page_title = "Expériences" %}
-{% block content %}
-<section class="card">
-  <h2>Expériences</h2>
-  <div class="grid">
-    {% for e in experiences %}
-    <article class="tile">
-      <div class="tile-top">
-        <h3>{{ e.role }}</h3>
-        <p class="muted">{{ e.company }} • {{ e.date }}</p>
-      </div>
-      <ul>
-        {% for b in e.bullets %}
-        <li>{{ b }}</li>
-        {% endfor %}
-      </ul>
-      <div class="tags">
-        {% for t in e.tags %}
-        <span class="tag">{{ t }}</span>
-        {% endfor %}
-      </div>
-    </article>
-    {% endfor %}
   </div>
 </section>
 {% endblock %}

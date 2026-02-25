@@ -8,13 +8,13 @@
   <h3 class="section-title">{{ c.category }}</h3>
   <div class="grid">
     {% for it in c.items %}
-    <article class="tile compact">
+    <article class="tile compact tilt" data-tilt>
       <div class="tile-top">
         <h3>{{ it.name }}</h3>
         <p class="muted">{{ it.level }}%</p>
       </div>
       <div class="bar">
-        
+        <div class="bar-in" style="--w: {{ it.level | int }};"></div>
       </div>
     </article>
     {% endfor %}
