@@ -8,21 +8,80 @@
 </head>
 <body>
   <header class="top">
-    <div class="brand"><div class="glow-dot"></div><div><h1>Amel MOUCHAOUCHE</h1><p class="subtitle">Data Engineer – Alternance 12 mois</p></div></div>
+    <div class="brand">
+      <div class="glow-dot"></div>
+      <div>
+        <h1>Amel MOUCHAOUCHE</h1>
+        <p class="subtitle">Data Engineer – Alternance 12 mois</p>
+      </div>
+    </div>
+
     <nav class="nav">
-      <a class="btn" href="./index.html">Accueil</a><a class="btn" href="./realisations.html">Réalisations</a><a class="btn" href="./experience.html">Expérience</a><a class="btn" href="./formation.html">Formation</a><a class="btn" href="./competences.html">Compétences</a><a class="btn" href="./extra.html">Langues & Intérêts</a><a class="btn" href="./contact.html">Contact</a>
+      <a class="btn" href="./index.html">Accueil</a>
+      <a class="btn" href="./realisations.html">Réalisations</a>
+      <a class="btn" href="./experience.html">Expérience</a>
+      <a class="btn" href="./formation.html">Formation</a>
+      <a class="btn" href="./competences.html">Compétences</a>
+      <a class="btn" href="./extra.html">Langues & Intérêts</a>
+      <a class="btn" href="./contact.html">Contact</a>
     </nav>
   </header>
+
   <main class="wrap">
-    <section class="card">
-      <h2>Contact</h2>
-      <p><a href="https://www.linkedin.com/in/amelmouchaouche" target="_blank" rel="noreferrer">LinkedIn</a></p>
-      <p><a href="https://github.com/amelmouchaouche" target="_blank" rel="noreferrer">GitHub</a></p>
-      <p><a href="mailto:amel.mouchaouche09@gmail.com">amel.mouchaouche09@gmail.com</a></p>
-      <p><a href="tel:+33762579452">+33 7 62 57 94 52</a></p>
-    </section>
+    
+<section class="card">
+  <h2>Contact</h2>
+  <p class="muted">Clique pour ouvrir — ou copie en 1 clic.</p>
+
+  <div class="grid">
+    <a class="tile linktile tilt" data-tilt href="https://www.linkedin.com/in/amelmouchaouche" target="_blank" rel="noreferrer">
+      <div class="tile-top">
+        <h3>LinkedIn</h3>
+        <p class="muted">https://www.linkedin.com/in/amelmouchaouche</p>
+      </div>
+      <div class="cta">Ouvrir →</div>
+    </a>
+
+    <a class="tile linktile tilt" data-tilt href="https://github.com/amelmouchaouche" target="_blank" rel="noreferrer">
+      <div class="tile-top">
+        <h3>GitHub</h3>
+        <p class="muted">https://github.com/amelmouchaouche</p>
+      </div>
+      <div class="cta">Ouvrir →</div>
+    </a>
+
+    <div class="tile tilt" data-tilt>
+      <div class="tile-top">
+        <h3>Email</h3>
+        <p class="muted"><a class="inline-link" href="mailto:amel.mouchaouche09@gmail.com">amel.mouchaouche09@gmail.com</a></p>
+      </div>
+      <div class="row">
+        <button class="chip" data-copy="amel.mouchaouche09@gmail.com">Copier</button>
+        <a class="chip chip-ghost" href="mailto:amel.mouchaouche09@gmail.com">Écrire</a>
+      </div>
+    </div>
+
+    <div class="tile tilt" data-tilt>
+      <div class="tile-top">
+        <h3>Téléphone</h3>
+        <p class="muted"><a class="inline-link" href="tel:+33 7 62 57 94 52">+33 7 62 57 94 52</a></p>
+      </div>
+      <div class="row">
+        <button class="chip" data-copy="+33 7 62 57 94 52">Copier</button>
+        <a class="chip chip-ghost" href="tel:+33 7 62 57 94 52">Appeler</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+
   </main>
-  <footer class="footer"><span>© Amel MOUCHAOUCHE</span></footer>
+
+  <footer class="footer">
+    <span>© Amel MOUCHAOUCHE</span>
+  </footer>
+
   <script src="./assets/app.js"></script>
 </body>
 </html>
